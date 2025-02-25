@@ -1,0 +1,198 @@
+/* Menu Screen */
+#menu-screen {
+    position: relative;
+    width: 400px;
+    height: 500px;
+    display: none;
+}
+
+/* Clouds Background */
+.clouds-background {
+    position: absolute;
+    width: 400px;
+    height: 500px;
+    left: 0px;
+    top: 0px;
+    background: url('../assets-resized/clouds_pixel400x500.png') no-repeat center;
+    background-size: cover;
+}
+
+/* Remove border from buttons (if any) */
+button {
+    border: none;
+    /* Removes any default border */
+    background-color: transparent;
+    /* If any background color, remove it */
+    outline: none;
+    /* Remove any outline */
+    cursor: pointer;
+    /* Make the cursor a pointer when hovering */
+    transition: transform 0.3s ease-in-out;
+    /* Smooth transition for scaling */
+}
+
+/* Scale button on hover */
+button:hover {
+    transform: scale(1.1) rotate(1.28deg);
+    /* Scales the button up by 10% */
+}
+
+/* Add transition to make the scaling smooth */
+button:active {
+    transform: scale(1.05);
+    /* Scales the button down a little when clicked */
+}
+
+
+/* Flame Button */
+.flame-button {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    left: 201.89px;
+    top: 267px;
+    background: url('../assets-resized/fire_symbol_pixel.png') no-repeat center;
+    background-size: contain;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+/* Flora Button */
+.flora-button {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    left: 32.89px;
+    top: 78px;
+    background: url('../assets-resized/flower_pixel.png') no-repeat center;
+    background-size: contain;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+/* Fae Wand Button */
+.fae-wand-button {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    left: 200.89px;
+    top: 79px;
+    background: url('../assets-resized/wand_pixel.png') no-repeat center;
+    background-size: contain;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    transform: rotate(0.32deg);
+}
+
+/* Foam Button */
+.foam-button {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    left: 31.58px;
+    top: 263px;
+    background: url('../assets-resized/water_symbol_pixel.png') no-repeat center;
+    background-size: contain;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+/* Choose Your Magic Tool Text */
+.choose-magic-tool {
+    position: absolute;
+    width: 372px;
+    height: 44px;
+    left: calc(50% - 372px / 2 + 7px);
+    top: calc(50% - 44px / 2 - 172px);
+    transform: translateY(-5px);
+    font-family: 'Pixelify Sans';
+    font-size: 32px;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: -0.43px;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Flora Label */
+.flora-label {
+    position: absolute;
+    width: 130px;
+    height: 22px;
+    left: calc(50% - 130px / 2 - 88px);
+    top: calc(50% - 22px / 2 + 6px);
+    transform: translateY(-5px);
+    font-family: 'Pixelify Sans';
+    font-size: 32px;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: -0.43px;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Foam Label */
+.foam-label {
+    position: absolute;
+    width: 130px;
+    height: 22px;
+    left: calc(50% - 130px / 2 - 90px);
+    top: calc(50% - 22px / 2 + 194px);
+    transform: translateY(-5px);
+    font-family: 'Pixelify Sans';
+    font-size: 32px;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: -0.43px;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Fae Label */
+.fae-label {
+    position: absolute;
+    width: 130px;
+    height: 22px;
+    left: calc(50% - 130px / 2 + 86px);
+    top: calc(50% - 22px / 2 + 3px);
+    transform: translateY(-5px);
+    font-family: 'Pixelify Sans';
+    font-size: 32px;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: -0.43px;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.vector-1 {
+    position: absolute;
+    left: 78.25%;
+    right: 12.2%;
+    top: 2%;
+    bottom: 91.05%;
+    background: #EE8994;
+}
+
+/* Vector 2 */
+.vector-2 {
+    position: absolute;
+    left: 89%;
+    right: 1.45%;
+    top: 1.4%;
+    bottom: 90.96%;
+    background: #F5EAC3;
+}
+
+/* Flame Label */
+.flame-label {
+    position: absolute;
+    width: 130px;
+    height: 22px;
+    left: calc(50% - 130px / 2 + 80px);
+    top: calc(50% - 22px / 2 + 195px);
+    transform: translateY(-5px);
+    font-family: 'Pixelify Sans';
+    font-size: 32px;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: -0.43px;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}

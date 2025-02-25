@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Water Reminder App</title>
+</head>
+<body>
+  <div id="app">
+    <!-- Start Screen -->
+    <div id="start-screen">
+      <h1>Wata time!</h1>
+      <button onclick="goToMenu()">Start</button>
+    </div>
+
+    <!-- Menu Screen -->
+    <div id="menu-screen" style="display: none;">
+      <h1>Choose your magic tool</h1>
+      <button onclick="goToCountdown('fae')">fae</button>
+      <button>flower</button>
+      <button>foam</button>
+      <button>flame</button>
+    </div>
+
+    <!-- Countdown Screen -->
+    <div id="countdown-screen" style="display: none;">
+      <h2>Add h2o to your potion</h2>
+      <h1 id="timer">30:00</h1>
+      <p>Remaining drinks: <span id="drink-count">8</span></p>
+    </div>
+
+    <!-- Time's Up Screen -->
+    <div id="timesup-screen" style="display: none;">
+      <h1>Time's up! Drink water!</h1>
+      <button onclick="drinkWater()">I drank wata</button>
+    </div>
+
+    <!-- Potion Done Screen -->
+    <div id="potion-done-screen" style="display: none;">
+      <h1>Potion is done! Now let's cast a spell...</h1>
+      <button onclick="goToFinalScreen()">Cast Spell</button>
+    </div>
+
+    <!-- Final Screen -->
+    <div id="final-screen" style="display: none;">
+      <h1>Bibbidy Bobbidy Boo! A new friend has flown into your life. &lt;3</h1>
+      <button>Befriend Fairy</button>
+      <button>Feed Fairy to Dragon</button>
+    </div>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>

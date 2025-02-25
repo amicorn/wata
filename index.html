@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Water Reminder App</title>
+  <!-- <link rel="stylesheet" href="styles.css"> -->
+  <link rel="stylesheet" href="styles/global.css">
+  <link rel="stylesheet" href="styles/start-screen.css">
+  <link rel="stylesheet" href="styles/menu-screen.css">
+
+</head>
+
+<body>
+  <!-- Draggable Header (Placed Outside of #app for Persistence) -->
+  <div class="draggable-header">
+    <span class="header-text">thirst alert</span>
+    <div class="header-right">
+      <div class="icon-heart"></div>
+      <div class="close-box" onclick="window.close()"></div>
+    </div>
+  </div>
+
+  <div id="app">
+    <!-- Start Screen -->
+    <div id="start-screen" class="start-screen" style="display: block;">
+      <div class="start-background">
+        <h1 class="wata-time">Wata Time!</h1>
+        <div class="icon-drop"></div>
+        <button class="start-button" onclick="goToMenu()">
+          <span class="start-text">Start</span>
+          <div class="play-icon"></div>
+        </button>
+      </div>
+    </div>
+
+    <!-- Menu Screen -->
+    <div id="menu-screen" class="menu-screen" style="display: none;">
+      <!-- Clouds Background -->
+      <div id="clouds-background" class="clouds-background"></div>
+
+      <!-- Buttons -->
+      <button class="flame-button"></button>
+      <button class="flora-button"></button>
+      <button class="fae-wand-button"></button>
+      <button class="foam-button"></button>
+
+      <!-- Labels -->
+      <div class="choose-magic-tool">Choose Your Magic Tool ✰</div>
+      <div class="flora-label">Flora</div>
+      <div class="foam-label">Foam</div>
+      <div class="fae-label">Fae</div>
+      <div class="flame-label">Flame</div>
+    </div>
+
+    <!-- Countdown Screen -->
+    <div id="countdown-screen" style="display: none;">
+      <h2>Add h2o to your potion</h2>
+      <h1 id="timer">30:00</h1>
+      <p>Remaining drinks: <span id="drink-count">8</span></p>
+    </div>
+
+    <!-- Time's Up Screen -->
+    <div id="timesup-screen" style="display: none;">
+      <h1>Time's up! Drink water!</h1>
+      <button onclick="drinkWater()">I drank wata</button>
+    </div>
+
+    <!-- Potion Done Screen -->
+    <div id="potion-done-screen" style="display: none;">
+      <h1>Potion is done! Now let's cast a spell...</h1>
+      <button onclick="goToFinalScreen()">Cast Spell</button>
+    </div>
+
+    <!-- Final Screen -->
+    <div id="final-screen" style="display: none;">
+      <h1>Bibbidy Bobbidy Boo! A new friend has flown into your life. &lt;3</h1>
+      <button>Befriend Fairy</button>
+      <button>Feed Fairy to Dragon</button>
+    </div>
+
+
+    <script src="renderer.js"></script>
+</body>
+
+</html>

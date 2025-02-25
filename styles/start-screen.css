@@ -1,0 +1,158 @@
+
+/* Start Screen Container */
+#start-screen {
+    position: relative;
+    width: 400px;
+    height: 500px;
+    background: #4CC1F2;
+    overflow: hidden;
+    display: block;
+}
+
+/* Background Image */
+.start-background {
+    position: absolute;
+    width: 400px;
+    height: 500px;
+    left: 0px;
+    top: 0px;
+    background: url('../assets-resized/landscape_pixel_400x500.png') no-repeat center;
+    background-size: cover;
+}
+
+/* "Wata Time!" Title */
+.wata-time {
+    position: absolute;
+    width: 290px;
+    height: 57px;
+    left: 80px;
+    top: 32px;
+    font-family: 'Pixelify Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 58px;
+    color: #F6ECE1;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Custom water drop icon */
+.icon-drop {
+    position: relative; /* Keeps it within its normal flow */
+    width: 32.33px;
+    height: 46.18px;
+    left: 184px;
+    top: 81.14px;
+    background: url('../assets-resized/icon-drop.png') no-repeat center;
+    background-size: contain;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000; /* Ensure it's above other elements */
+  }
+  
+  /* Animation for hovering effect */
+  .icon-drop:hover {
+    animation: moveDownUp 1s ease-in-out infinite; /* Apply the new animation */
+  }
+  
+  /* Keyframes for down and up animation */
+  @keyframes moveDownUp {
+    0% {
+      transform: translateY(0); /* Start at normal position */
+    }
+    50% {
+      transform: translateY(10px); /* Move down by 10px */
+    }
+    100% {
+      transform: translateY(0); /* Return to the original position */
+    }
+  }
+  
+
+/* Start Button (Includes play icon and start text) */
+.start-button {
+    position: absolute;
+    width: 212px;
+    height: 212px;
+    left: 94px;
+    top: 250px;
+    background: url('../assets-resized/button-cropped.png') no-repeat center;
+    background-size: contain;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Start Button Hover Effect */
+.start-button:hover {
+    transform: scale(1.1);
+}
+
+/* Start Button Click Effect */
+.start-button:active {
+    transform: scale(1.2);
+}
+
+/* Start Button Content */
+.start-button-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Play Icon Inside Start Button */
+.play-icon {
+    width: 21px;
+    height: 42px;
+    background: url('../assets/icons/icon-play.png') no-repeat center;
+    background-size: contain;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+/* Start Button Text */
+.start-text {
+    font-family: 'Pixelify Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 22px;
+    letter-spacing: -0.43px;
+    color: #F6ECE1;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Decorative Vectors */
+.vector {
+    position: absolute;
+    left: 77.75%;
+    right: 12.7%;
+    top: 1.8%;
+    bottom: 91.25%;
+    background: #F5EAC3;
+}
+
+.vector-close {
+    position: absolute;
+    left: 89%;
+    right: 1.45%;
+    top: 1.4%;
+    bottom: 90.96%;
+    background: #F5EAC3;
+}
+
+.vector-start {
+    position: absolute;
+    left: 36%;
+    right: 58.75%;
+    top: 78%;
+    bottom: 13.6%;
+    background: #F6ECE1;
+}

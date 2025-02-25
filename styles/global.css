@@ -1,0 +1,74 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Draggable area */
+.draggable-header {
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    /* Height of the draggable area */
+    cursor: grab;
+    -webkit-app-region: drag; /* This finally made it draggable */
+    position: fixed;
+    -webkit-app-region: drag;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 10px;
+    z-index: 1000;
+}
+
+/* Draggable Header Text */
+.header-text {
+    margin-top: 5px;
+    font-family: 'Pixelify Sans', sans-serif;
+    color: #F6ECE1;
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+    z-index: 1100;
+    /* Ensure it's above other content */
+}
+
+/* Right-side container for heart + close button */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    /* Add space between icons */
+    position: absolute;
+    right: 10px;
+    top: 5px;
+}
+
+/* Heart Icon */
+.icon-heart {
+    z-index: 1100;
+    /* Ensures it's visible */
+    width: 38.22px;
+    height: 34.75px;
+    right: 20px;
+    top: 9px;
+    background: url('../assets/icons/icon-heart.png') no-repeat center;
+    background-size: contain;
+    cursor: pointer;
+    -webkit-app-region: no-drag;
+}
+
+/* Custom Close Button */
+.close-box {
+    width: 38.22px;
+    height: 38.22px;
+    background: url('../assets/icons/icon-close-box.png') no-repeat center;
+    background-size: contain;
+    cursor: pointer;
+    -webkit-app-region: no-drag;
+    /* Prevents dragging on close button */
+    top: 5px;
+}
