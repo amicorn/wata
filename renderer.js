@@ -1,6 +1,6 @@
 let drinkCount = 3;
 let countdown;
-let minutesToDrink = 1;
+let minutesToDrink = 0.1;
 let timeLeft = minutesToDrink * 60; // convert minutes to seconds
 
 document.querySelector('.close-box').addEventListener('click', () => {
@@ -52,17 +52,34 @@ function updateTimerDisplay() {
 
 function drinkWater() {
   if (drinkCount > 1) {
-    drinkCount--;
-    document.getElementById("drink-count").innerText = drinkCount;
+    drinkCount--; // Decrease drink count by 1
+    updateDrinkCountText(); // Update the text for drink count
+
+    // Switch to the countdown screen
     switchScreen("timesup-screen", "countdown-screen");
     startCountdown();
   } else {
-    switchScreen("timesup-screen", "potion-done-screen");
+    // When the drink count reaches 0, switch to the potion done screen
+    switchScreen("timesup-screen", "cast-spell-screen");
   }
 }
 
+function updateDrinkCountText() {
+  // Update the text to show the current drink count
+  const drinkCountElement = document.getElementById("drink-count-text");
+  if (drinkCountElement) {
+    // Adjust text based on remaining drinks
+    if (drinkCount > 0) {
+      drinkCountElement.innerText = `${drinkCount} more to go!`;
+    } else {
+      drinkCountElement.innerText = `No more to go!`;
+    }
+  }
+}
+
+
 function goToFinalScreen() {
-  switchScreen("potion-done-screen", "final-screen");
+  switchScreen("cast-spell-screen", "reward-screen");
 }
 
 // Function to switch screens
@@ -79,5 +96,15 @@ function switchScreen(hide, show) {
 
   hideScreen.style.display = "none";  // Hide current screen
   showScreen.style.display = "block"; // Show new screen
+
+  // Make sure the drink count text is visible when switching to countdown screen
+  if (show === "countdown-screen") {
+    const drinkCountElement = document.getElementById("drink-count");
+    if (drinkCountElement) {
+      updateDrinkCountText();
+      // Reset text for the next screen
+      // drinkCountElement.innerText = `${drinkCount} more to go!`;
+    }
+  }
 }
 

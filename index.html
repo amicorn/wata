@@ -6,11 +6,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Water Reminder App</title>
-  <!-- <link rel="stylesheet" href="styles.css"> -->
   <link rel="stylesheet" href="styles/global.css">
   <link rel="stylesheet" href="styles/start-screen.css">
   <link rel="stylesheet" href="styles/menu-screen.css">
   <link rel="stylesheet" href="styles/countdown-screen.css">
+  <link rel="stylesheet" href="styles/timesup-screen.css">
+  <link rel="stylesheet" href="styles/cast-spell-screen.css">
+  <link rel="stylesheet" href="styles/reward-screen.css">
 
 </head>
 
@@ -58,43 +60,47 @@
 
     <!-- Countdown Screen -->
     <div id="countdown-screen" class="countdown-screen" style="display: none;">
-      <!-- Background -->
       <div class="countdown-background"></div>
-
-      <!-- Header Text -->
       <h2 class="add-h2o-text">Add h2o to your potion</h2>
 
-      <!-- Potion with Sparkles -->
       <div class="potion-animation"></div>
-      <div class="sparkle sparkle-1"></div>
-      <div class="sparkle sparkle-2"></div>
-      <div class="sparkle sparkle-3"></div>
-      <div class="sparkle sparkle-4"></div>
 
-      <!-- Countdown Timer -->
       <h1 id="timer" class="timer-text">30:00</h1>
-
-      <!-- Remaining Drinks Count -->
-      <p class="drink-count-text">3 more to go!</p>
+      <p id="drink-count-text" class="drink-count-text">3 more to go!</p>
     </div>
 
-    <!-- Time's Up Screen -->
-    <div id="timesup-screen" style="display: none;">
-      <h1>Time's up! Drink water!</h1>
-      <button onclick="drinkWater()">I drank wata</button>
+    <!-- Drink Water Screen -->
+    <div id="timesup-screen" class="timesup-screen" style="display: none;">
+      <div class="clouds-background"></div>
+      <h2 class="time-up-text">Time’s up! Take a drink!</h2>
+      <div class="potion-animation-drink"></div>
+      <button class="drink-button" onclick="drinkWater()">
+        <span class="drink-button-text">i drank wata</span>
+      </button>
     </div>
 
     <!-- Potion Done Screen -->
-    <div id="potion-done-screen" style="display: none;">
-      <h1>Potion is done! Now let's cast a spell...</h1>
-      <button onclick="goToFinalScreen()">Cast Spell</button>
+    <div id="cast-spell-screen" style="display: none;">
+      <div class="clouds-background"></div>
+      <h2 class="potion-done-text">Your potion is done! Now let’s cast a spell...</h2>
+      <div class="potion-image"></div>
+      <div class="fae-wand-image"></div>
+      <button class="cast-spell-button" onclick="goToFinalScreen()">
+        <span class="cast-spell-text">cast spell</span>
+      </button>
     </div>
 
     <!-- Final Screen -->
-    <div id="final-screen" style="display: none;">
-      <h1>Bibbidy Bobbidy Boo! A new friend has flown into your life. &lt;3</h1>
-      <button>Befriend Fairy</button>
-      <button>Feed Fairy to Dragon</button>
+    <div id="reward-screen" style="display: none;">
+      <div class="landscape-background"></div>
+      <h2 class="reward-text">Bibbidy bobbidy boo! A new friend has flown into your life!</h2>
+      <div class="fairy-image"></div>
+      <button class="befriend-button">
+        <span class="befriend-text">befriend></span>
+      </button>
+      <button class="feed-to-dragon-button">
+        <span class="feed-to-dragon-text">feed to dragon></span>
+      </button>
     </div>
 
 

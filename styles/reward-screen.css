@@ -1,0 +1,118 @@
+/* Reward Screen */
+#reward-screen {
+    position: relative;
+    width: 400px;
+    height: 500px;
+    background: #4CC1F2;
+    display: none; /* Initially hidden until activated */
+}
+
+/* Landscape Background */
+.landscape-background {
+    position: absolute;
+    width: 400px;
+    height: 500px;
+    left: 0px;
+    top: 0px;
+    background: url('../assets-resized/landscape_pixel_2_400x500.png') no-repeat center;
+    background-size: cover;
+}
+
+/* Magical Fairy Image */
+.fairy-image {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 84px;
+    top: 192px;
+    background: url('../assets-resized/fairy_pixel.png') no-repeat center;
+    background-size: contain;
+    animation: fairyFloat 6s ease-in-out infinite;
+}
+
+/* "Bibbidy bobbidy boo! A new friend has flown into your life!" Text */
+.reward-text {
+    position: absolute;
+    width: 366px;
+    height: 72px;
+    left: 41px;
+    top: 35px;
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: -0.43px;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Animation for fairy floating smoothly */
+@keyframes fairyFloat {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    25% {
+        transform: translate(30px, -15px); /* Moves up and right */
+    }
+    50% {
+        transform: translate(60px, 0px); /* Moves further to the right */
+    }
+    75% {
+        transform: translate(30px, 15px); /* Moves down and right */
+    }
+    100% {
+        transform: translate(0px, 0px); /* Back to the original position */
+    }
+}
+
+/* Befriend Button */
+.befriend-button {
+    position: absolute;
+    width: 190px;
+    height: 190px;
+    left: 10px;
+    top: 346px;
+    background: url('../assets-resized/button-cropped.png') no-repeat center;
+    background-size: contain;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center text horizontally */
+    align-items: center; /* Center text vertically */
+}
+
+/* Befriend Text */
+.befriend-text {
+    text-align: center;
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 32px;
+    line-height: 22px;
+    letter-spacing: -0.43px;
+    color: #F6ECE1;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Feed to Dragon Button */
+.feed-to-dragon-button {
+    position: absolute;
+    width: 190px;
+    height: 190px;
+    left: 188px;
+    top: 346px;
+    background: url('../assets-resized/button-cropped.png') no-repeat center;
+    background-size: contain;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center text horizontally */
+    align-items: center; /* Center text vertically */
+}
+
+/* Feed to Dragon Text */
+.feed-to-dragon-text {
+    text-align: center;
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 28px;
+    line-height: 22px;
+    letter-spacing: -0.43px;
+    color: #F6ECE1;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}

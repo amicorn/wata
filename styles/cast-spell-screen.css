@@ -1,0 +1,84 @@
+/* Potion Done Screen */
+#cast-spell-screen {
+    position: relative;
+    width: 400px;
+    height: 500px;
+    background: #FFFFFF;
+    display: none; /* Initially hidden until activated */
+}
+
+/* Clouds Background */
+.clouds-background {
+    position: absolute;
+    width: 400px;
+    height: 500px;
+    left: 0px;
+    top: 0px;
+    background: url('../assets-resized/clouds_pixel400x500.png') no-repeat center;
+    background-size: cover;
+}
+
+/* "Your potion is done! Now let’s cast a spell..." Text */
+.potion-done-text {
+    position: absolute;
+    width: 366px;
+    height: 72px;
+    left: 17px;
+    top: 43px;
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: -0.43px;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Filled Potion Image */
+.potion-image {
+    position: absolute;
+    width: 253px;
+    height: 253px;
+    left: 17px;
+    top: 115px;
+    background: url('../assets-resized/potion_pixel.png') no-repeat center;
+    background-size: contain;
+}
+
+/* Fae Wand Image */
+.fae-wand-image {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    left: 197.89px;
+    top: 115px;
+    background: url('../assets-resized/wand_pixel.png') no-repeat center;
+    background-size: contain;
+    transform: rotate(0.32deg);
+}
+
+/* Cast Spell Button */
+.cast-spell-button {
+    position: absolute;
+    width: 212px;
+    height: 212px;
+    left: 87px;
+    top: 339px;
+    background: url('../assets-resized/button-cropped.png') no-repeat center;
+    background-size: contain;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center text horizontally */
+    align-items: center; /* Center text vertically */
+}
+
+/* Cast Spell Text */
+.cast-spell-text {
+    text-align: center;
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 32px;
+    line-height: 22px;
+    letter-spacing: -0.43px;
+    color: #F6ECE1;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
