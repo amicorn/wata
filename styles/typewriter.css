@@ -1,0 +1,27 @@
+/* Typewriter Effect */
+@keyframes typewriter {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  /* Style for text with typewriter effect */
+  .typewriter {
+    display: inline-block;
+    overflow: hidden; /* Hide the text initially */
+    white-space: nowrap; /* Prevent wrapping */
+    border-right: 3px solid #fff; /* Cursor effect */
+    width: 0; /* Start with width 0 */
+    animation: typewriter 3s steps(30) 0s forwards, blink-caret 0.75s step-end infinite;
+  }
+  
+  /* Blinking cursor effect */
+  @keyframes blink-caret {
+    50% {
+      border-color: transparent;
+    }
+  }
+  

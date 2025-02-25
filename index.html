@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Water Reminder App</title>
   <link rel="stylesheet" href="styles/global.css">
+  <link rel="stylesheet" href="styles/typewriter.css">
   <link rel="stylesheet" href="styles/start-screen.css">
   <link rel="stylesheet" href="styles/menu-screen.css">
   <link rel="stylesheet" href="styles/countdown-screen.css">
@@ -30,7 +31,7 @@
     <!-- Start Screen -->
     <div id="start-screen" class="start-screen" style="display: block;">
       <div class="start-background">
-        <h1 class="wata-time">Wata Time!</h1>
+        <h1 class="wata-time typewriter">Wata Time!</h1>
         <div class="icon-drop"></div>
         <button class="start-button" onclick="goToMenu()">
           <span class="start-text">Start</span>
@@ -51,7 +52,7 @@
       <button class="foam-button"></button>
 
       <!-- Labels -->
-      <div class="choose-magic-tool">Choose Your Magic Tool ✰</div>
+      <div class="choose-magic-tool typewriter">Choose Your Magic Tool ✰</div>
       <div class="flora-label">Flora</div>
       <div class="foam-label">Foam</div>
       <div class="fae-label">Fae</div>
@@ -61,7 +62,7 @@
     <!-- Countdown Screen -->
     <div id="countdown-screen" class="countdown-screen" style="display: none;">
       <div class="countdown-background"></div>
-      <h2 class="add-h2o-text">Add h2o to your potion</h2>
+      <h2 class="add-h2o-text typewriter">Add h2o to your potion</h2>
 
       <div class="potion-animation"></div>
 
@@ -72,7 +73,7 @@
     <!-- Drink Water Screen -->
     <div id="timesup-screen" class="timesup-screen" style="display: none;">
       <div class="clouds-background"></div>
-      <h2 class="time-up-text">Time’s up! Take a drink!</h2>
+      <h2 class="time-up-text typewriter">Time’s up! Take a drink!</h2>
       <div class="potion-animation-drink"></div>
       <button class="drink-button" onclick="drinkWater()">
         <span class="drink-button-text">i drank wata</span>
@@ -82,7 +83,7 @@
     <!-- Potion Done Screen -->
     <div id="cast-spell-screen" style="display: none;">
       <div class="clouds-background"></div>
-      <h2 class="potion-done-text">Your potion is done! Now let’s cast a spell...</h2>
+      <h2 class="potion-done-text typewriter">Your potion is done! Now let’s cast a spell...</h2>
       <div class="potion-image"></div>
       <div class="fae-wand-image"></div>
       <button class="cast-spell-button" onclick="goToFinalScreen()">
@@ -93,7 +94,7 @@
     <!-- Final Screen -->
     <div id="reward-screen" style="display: none;">
       <div class="landscape-background"></div>
-      <h2 class="reward-text">Bibbidy bobbidy boo! A new friend has flown into your life!</h2>
+      <h2 class="reward-text typewriter">Bibbidy bobbidy boo! A new friend has flown into your life!</h2>
       <div class="fairy-image"></div>
       <button class="befriend-button">
         <span class="befriend-text">befriend></span>
