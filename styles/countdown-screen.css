@@ -1,0 +1,136 @@
+/* Timer/Countdown Screen */
+#countdown-screen {
+    position: relative;
+    width: 400px;
+    height: 500px;
+    background: #FFFFFF;
+    display: none; /* Initially hidden until activated */
+}
+
+/* Clouds Background */
+.countdown-background {
+    position: absolute;
+    width: 400px;
+    height: 500px;
+    left: 0px;
+    top: 0px;
+    background: url('../assets-resized/clouds_pixel400x500.png') no-repeat center;
+    background-size: cover;
+}
+
+/* "Add h2o to your potion" Text */
+.add-h2o-text {
+    position: absolute;
+    width: 366px;
+    height: 72px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 43px;
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: -0.43px;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+/* Potion Animation - Gentle Floating & Glow */
+.potion-animation {
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 79px;
+    background: url('../assets-resized/potion_pixel.gif') no-repeat center;
+    background-size: contain;
+    animation: floatUpDown 3s ease-in-out infinite, glowPulse 2.5s ease-in-out infinite;
+}
+
+/* Floating Effect (Potion moves up & down) */
+@keyframes floatUpDown {
+    0% { transform: translateX(-50%) translateY(0px); }
+    50% { transform: translateX(-50%) translateY(-10px); } /* Moves up slightly */
+    100% { transform: translateX(-50%) translateY(0px); }
+}
+
+/* Soft Glow Effect */
+@keyframes glowPulse {
+    0% { filter: drop-shadow(0px 0px 5px rgba(173, 216, 230, 0.5)); }
+    50% { filter: drop-shadow(0px 0px 15px rgba(173, 216, 230, 0.9)); } /* Stronger glow */
+    100% { filter: drop-shadow(0px 0px 5px rgba(173, 216, 230, 0.5)); }
+}
+
+/* Sparkles Effect */
+@keyframes sparkleEffect {
+    0% { opacity: 0; transform: scale(0.8); }
+    50% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0; transform: scale(1.2); }
+}
+
+/* Sparkles - Positioned Around Potion */
+.sparkle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: url('../assets-resized/sparkle.png') no-repeat center;
+    background-size: contain;
+    animation: sparkleEffect 2s infinite alternate;
+}
+
+/* Sparkle Positions (Add These in HTML) */
+.sparkle-1 { left: 30%; top: 20px; animation-delay: 0.3s; }
+.sparkle-2 { left: 70%; top: 50px; animation-delay: 0.6s; }
+.sparkle-3 { left: 50%; top: 90px; animation-delay: 1s; }
+
+
+/* Countdown Timer Text (30:00) */
+.timer-text {
+    position: absolute;
+    width: 100%; /* Make it span the full width */
+    text-align: center; /* Center the text */
+    top: 370px;
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 96px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: -0.43px;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* "1 more to go!" Text */
+.drink-count-text {
+    position: absolute;
+    width: 100%; /* Make it span the full width */
+    text-align: center; /* Center the text */
+    top: 424px;
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: -0.43px;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Vector Decorations */
+.vector-1 {
+    position: absolute;
+    left: 78.25%;
+    right: 12.2%;
+    top: 1.4%;
+    bottom: 91.65%;
+    background: #EE8994;
+}
+
+.vector-2 {
+    position: absolute;
+    left: 89%;
+    right: 1.45%;
+    top: 1.4%;
+    bottom: 90.96%;
+    background: #F5EAC3;
+}

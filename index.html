@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="styles/global.css">
   <link rel="stylesheet" href="styles/start-screen.css">
   <link rel="stylesheet" href="styles/menu-screen.css">
+  <link rel="stylesheet" href="styles/countdown-screen.css">
 
 </head>
 
@@ -44,7 +45,7 @@
       <!-- Buttons -->
       <button class="flame-button"></button>
       <button class="flora-button"></button>
-      <button class="fae-wand-button"></button>
+      <button class="fae-wand-button" onclick="goToCountdown()"></button>
       <button class="foam-button"></button>
 
       <!-- Labels -->
@@ -56,10 +57,25 @@
     </div>
 
     <!-- Countdown Screen -->
-    <div id="countdown-screen" style="display: none;">
-      <h2>Add h2o to your potion</h2>
-      <h1 id="timer">30:00</h1>
-      <p>Remaining drinks: <span id="drink-count">8</span></p>
+    <div id="countdown-screen" class="countdown-screen" style="display: none;">
+      <!-- Background -->
+      <div class="countdown-background"></div>
+
+      <!-- Header Text -->
+      <h2 class="add-h2o-text">Add h2o to your potion</h2>
+
+      <!-- Potion with Sparkles -->
+      <div class="potion-animation"></div>
+      <div class="sparkle sparkle-1"></div>
+      <div class="sparkle sparkle-2"></div>
+      <div class="sparkle sparkle-3"></div>
+      <div class="sparkle sparkle-4"></div>
+
+      <!-- Countdown Timer -->
+      <h1 id="timer" class="timer-text">30:00</h1>
+
+      <!-- Remaining Drinks Count -->
+      <p class="drink-count-text">3 more to go!</p>
     </div>
 
     <!-- Time's Up Screen -->

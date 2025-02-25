@@ -1,6 +1,6 @@
 let drinkCount = 3;
 let countdown;
-let minutesToDrink = 0.1;
+let minutesToDrink = 1;
 let timeLeft = minutesToDrink * 60; // convert minutes to seconds
 
 document.querySelector('.close-box').addEventListener('click', () => {
