@@ -1,0 +1,21 @@
+<svg width="169" height="169" viewBox="0 0 169 169" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g filter="url(#filter0_d_5_18)">
+<rect x="4.88724" width="160" height="160" transform="rotate(0.317724 4.88724 0)" fill="url(#pattern0_5_18)" shape-rendering="crispEdges"/>
+</g>
+<defs>
+<filter id="filter0_d_5_18" x="0" y="0" width="168.885" height="168.885" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_5_18"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_5_18" result="shape"/>
+</filter>
+<pattern id="pattern0_5_18" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_5_18" transform="scale(0.03125)"/>
+</pattern>
+<image id="image0_5_18" width="32" height="32" preserveAspectRatio="none" xlink:href="data:image/png;base64,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"/>
+</defs>
+</svg>
