@@ -1,4 +1,4 @@
-/* Typewriter Effect */
+/* Typewriter effect */
 @keyframes typewriter {
     from {
       width: 0;
@@ -8,17 +8,26 @@
     }
   }
   
-  /* Style for text with typewriter effect */
-  .typewriter {
-    display: inline-block;
-    overflow: hidden; /* Hide the text initially */
-    white-space: nowrap; /* Prevent wrapping */
-    border-right: 3px solid #fff; /* Cursor effect */
-    width: 0; /* Start with width 0 */
-    animation: typewriter 3s steps(30) 0s forwards, blink-caret 0.75s step-end infinite;
+  /* Blinking cursor effect */
+  @keyframes blink-caret {
+    50% {
+      border-color: transparent;
+    }
   }
   
-  /* Blinking cursor effect */
+  /* Apply the typewriter effect */
+  .typewriter {
+    display: inline-block;
+    overflow: hidden; /* Hide text initially */
+    white-space: nowrap; /* Prevent text from wrapping */
+    border-right: 3px solid #fff; /* Create the cursor effect */
+    width: 0; /* Start with width 0 */
+    animation: typewriter 2s steps(40) 0s 1 normal forwards, blink-caret 0.75s step-end infinite;
+    word-wrap: break-word; /* Allow wrapping of text if too long */
+    max-width: 100%; /* Prevent text from going off-screen */
+  }
+  
+  /* Make sure the cursor blinks properly */
   @keyframes blink-caret {
     50% {
       border-color: transparent;
