@@ -1,5 +1,5 @@
 # wata: a thirst alert app 🧚🏼‍♀️💧
-Art, design, and code by @amicorn
+Art, design, and code by me (@amicorn)
 
 ## Overview
 🎶 wata wata eh eh 🎶
@@ -15,6 +15,10 @@ App idea came to me because I'm always thirsty and dehydrated and so are all my 
 - Framework == Electron: framework to make desktop apps. Embeds Chromium rendering engine and Node.js runtime.
     - Needed to install NPM and NodeJs as prereqs
 - Languages == Javascript, HTML, CSS
+
+## Design
+Design by me
+- <a href="https://www.figma.com/proto/tKL5Rx1BYedixCro0N6j8R/Wata-app?node-id=49-5&t=p1OWdJ0uXzS725B6-1">Figma prototype</a>
 
 ## Resources
 - Sound Effects
