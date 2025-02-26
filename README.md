@@ -6,7 +6,7 @@ Art, design, and code by @amicorn
 
 Stay hydrated with this fantasy-themed drink water reminder app. 💦
 
-Pixies, potions, and pixels will motivate you to get that H2O your body needs to keep your life force.
+Pixies, potions, and pixels will motivate you to get that H2O fueling your life force.
 
 ## Inspiration
 App idea came to me because I'm always thirsty and dehydrated and so are all my female friends. Theme is fantasy pastel pixel art because I love fantasy and decided to try my hand at pixel art for the first time.
