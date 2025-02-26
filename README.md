@@ -20,6 +20,17 @@ App idea came to me because I'm always thirsty and dehydrated and so are all my 
 Design by me
 - <a href="https://www.figma.com/proto/tKL5Rx1BYedixCro0N6j8R/Wata-app?node-id=49-5&t=p1OWdJ0uXzS725B6-1">Figma prototype</a>
 
+## Workflow
+1. I first coded a basic POC of the app with only the functionality and no styling. Screen flow: start > menu > countdown timer > times up > countdown > times up (repeat N drinks) > cast spell > reward
+2. I hand-drew all the assets on Procreate from scratch and made a Figma design and wireframe with my artwork
+3. Hand-animated each frame of the bubbling sparkling potion animation. 50 frames total set at a rate of 8 frames/second.
+5. I resized all my assets/artwork and redrew some in Procreate to match my Figma design dimensions for each individual element across all screens. Also drew some buttons
+6. Added css styling and made the app visuals match the figma design. A very time-consuming step. 
+7. Added custom animations (flying fairy, floating potion, chugging potion, water rain drop)
+8. Added audio including background music and sound effects
+9. Refactored code to be more generic and configurable
+- Debugging: `npm start` then <Cmd + Option + i> to open devtools while running the app
+
 ## Resources
 - Sound Effects
     - Potion bubbling magic sfx from https://mixkit.co/free-sound-effects/magic/

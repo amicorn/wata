@@ -44,6 +44,7 @@ function stopSound(audio) {
   if (audio && !audio.paused) {
     audio.pause();
     audio.currentTime = 0;
+    audio.src = audio.src;
   }
 }
 
@@ -121,24 +122,18 @@ function goToFinalScreen() {
 
 // 📌 Switch Screens + Manage Sounds
 function switchScreen(hide, show) {
-  const hideScreen = document.getElementById(hide);
-  const showScreen = document.getElementById(show);
+  document.getElementById(hide).style.display = "none";
+  document.getElementById(show).style.display = "block";
 
-  if (!hideScreen || !showScreen) {
-    console.error("Error: One of the screens does not exist.");
-    return;
+  if (show === "timesup-screen") playSound(sounds.timer);
+  if (hide === "timesup-screen") {
+    console.log("hiding timer screen");
+    stopSound(sounds.timer);
   }
-  console.log(`Hiding ${hide} and showing ${show}`);
-
-  hideScreen.style.display = "none";
-  showScreen.style.display = "block";
+  if (hide === "countdown-screen") stopSound(sounds.potion);
 
   // 🎶 Play sounds assigned to the new screen
   if (soundEffects[show]) {
     soundEffects[show].forEach(sound => playSound(new Audio(`assets/music sfx/${sound}`)));
   }
-
-  // 🚫 Stop sounds when leaving screens
-  if (hide === "countdown-screen") stopSound(sounds.potion);
-  if (hide === "timesup-screen") stopSound(sounds.timer);
 }
