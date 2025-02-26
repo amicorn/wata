@@ -17,5 +17,9 @@ App idea came to me because I'm always thirsty and dehydrated and so are all my 
 - Languages == Javascript, HTML, CSS
 
 ## Resources
-- Magic sfx from https://mixkit.co/free-sound-effects/magic/
+- Sound Effects
+    - Potion bubbling magic sfx from https://mixkit.co/free-sound-effects/magic/
+    - Other magic sfx from Sound Effect by <a href="https://pixabay.com/users/universfield-28281460/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=278824">Universfield</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=278824">Pixabay</a>
+    - Timer up sfx: Sound Effect by <a href="https://pixabay.com/users/joo_yy-24508386/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=11238">Jooeun Yeo</a> from <a href="https://pixabay.com/sound-effects//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=11238">Pixabay</a>
+- Background music: <a href="https://www.youtube.com/watch?v=gI9IRxjT75Q">Under This Luminous Sky | Official Soundtrack - 3. Weaved Theme</a>
 - How I made my custom figma desktop icon: https://icons8.com/icon/uhcBDl2aashO/figma
