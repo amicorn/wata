@@ -4,7 +4,7 @@
     width: 400px;
     height: 500px;
     background: #FFFFFF;
-    display: none; /* Initially hidden until activated */
+    display: none; /* Initially hidden */
 }
 
 /* Clouds Background */
@@ -34,16 +34,26 @@
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-/* Potion Animation - Initially static image */
+/* Potion Animation - Bounce effect like chugga chugga */
+@keyframes bounceSideToSide {
+    0% { transform: translateX(0) translateY(0); }
+    25% { transform: translateX(-20px) translateY(-15px); } /* Slightly moves left and up */
+    50% { transform: translateX(0) translateY(0); } /* Returns to center */
+    75% { transform: translateX(20px) translateY(-15px); } /* Slightly moves right and up */
+    100% { transform: translateX(0) translateY(0); } /* Returns to center */
+}
+
 .potion-animation-drink {
     position: absolute;
     width: 248px;
     height: 248px;
     left: 69px;
-    top: 70px;
+    top: 90px;
     background: url('../assets-resized/potion_pixel.gif') no-repeat center;
     background-size: contain;
+    animation: bounceSideToSide 2.5s ease-in-out infinite; /* Smooth continuous animation */
 }
+
 
 /* "I Drank Wata" Button */
 .drink-button {
@@ -57,12 +67,12 @@
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     cursor: pointer;
 
-    display: flex; /* Use flexbox */
-    justify-content: center; /* Center text horizontally */
-    align-items: center; /* Center text vertically */
+    display: flex; /* This helps make button text appear */
+    justify-content: center;
+    align-items: center; 
 }
 
-/* "I Drank Wata" Text inside Button */
+/* "I Drank Wata" Text inside button */
 .drink-button-text {
     font-family: 'Pixelify Sans', sans-serif;
     font-size: 30px;

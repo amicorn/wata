@@ -15,7 +15,7 @@
     }
   }
   
-  /* Apply the typewriter effect */
+  /* Typewriter effect */
   .typewriter {
     display: inline-block;
     overflow: hidden; /* Hide text initially */
@@ -27,7 +27,7 @@
     max-width: 100%; /* Prevent text from going off-screen */
   }
   
-  /* Make sure the cursor blinks properly */
+  /* Make sure the cursor blinks */
   @keyframes blink-caret {
     50% {
       border-color: transparent;
