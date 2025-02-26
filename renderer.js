@@ -15,7 +15,6 @@ let sounds = {
 const soundEffects = {
   "reward-screen": ["magic-reveal.mp3", "mixkit-fairy-glitter-867.mp3"],
   "cast-spell-screen": ["mixkit-spellcaster-fairy-swoosh-1463.mp3"],
-  "timesup-screen": ["magic-timer.mp3"],
 };
 
 // 🎵 Start Background Music
@@ -32,7 +31,7 @@ function createAudio(src, { loop = false, volume = 1.0, startTime = 0 } = {}) {
 
 // 🔈 Play any sound (supports looping, volume, start time)
 function playSound(audio, { loop = false, volume = 0.4, startTime = 0 } = {}) {
-  if (!audio) return;
+  if (!audio || isMuted) return;
   audio.loop = loop;
   audio.volume = volume;
   audio.currentTime = startTime;
@@ -47,6 +46,35 @@ function stopSound(audio) {
     audio.src = audio.src;
   }
 }
+
+let isMuted = false;
+let currentlyPlayingSounds = new Set(); // Keep track of sounds that should be playing
+
+function toggleAudio() {
+  isMuted = !isMuted; // Toggle mute state
+
+  if (isMuted) {
+    // 🔇 Stop all currently playing sounds and store them in `currentlyPlayingSounds`
+    Object.entries(sounds).forEach(([name, audio]) => {
+      if (!audio.paused) {
+        currentlyPlayingSounds.add(name);
+        audio.pause();
+      }
+    });
+  } else {
+    // 🔊 Resume only the sounds that should be playing
+    currentlyPlayingSounds.forEach(name => {
+      sounds[name].play();
+    });
+    currentlyPlayingSounds.clear(); // Reset tracking set
+  }
+
+  // 🔄 Update music button icon
+  document.getElementById("music-icon").src = isMuted 
+    ? "assets/icons/mute icon.png" 
+    : "assets/icons/icon-music.png";
+}
+
 
 // ❌ Close Button
 document.querySelector('.close-box').addEventListener('click', () => window.close());

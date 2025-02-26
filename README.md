@@ -38,3 +38,4 @@ Design by me
     - Timer up sfx: Sound Effect by <a href="https://pixabay.com/users/joo_yy-24508386/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=11238">Jooeun Yeo</a> from <a href="https://pixabay.com/sound-effects//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=11238">Pixabay</a>
 - Background music: <a href="https://www.youtube.com/watch?v=gI9IRxjT75Q">Under This Luminous Sky | Official Soundtrack - 3. Weaved Theme</a>
 - How I made my custom figma desktop icon: https://icons8.com/icon/uhcBDl2aashO/figma
+- How I recoloured my mute icon SVG file: https://svgcolor.com/
