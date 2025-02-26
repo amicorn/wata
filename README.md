@@ -1,4 +1,5 @@
 # wata: a thirst alert app 🧚🏼‍♀️💧
+Art, design, and code by @amicorn
 
 ## Overview
 🎶 wata wata eh eh 🎶
