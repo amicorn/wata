@@ -1,4 +1,3 @@
-
 /* Start Screen Container */
 #start-screen {
     position: relative;
@@ -38,7 +37,7 @@
 
 /* Custom water drop icon */
 .icon-drop {
-    position: relative; /* Keeps it within its normal flow */
+    position: relative;
     width: 32.33px;
     height: 46.18px;
     left: 184px;
@@ -47,27 +46,35 @@
     background-size: contain;
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
-    z-index: 1000; /* Ensure it's above other elements */
-  }
-  
-  /* Animation for hovering effect */
-  .icon-drop:hover {
-    animation: moveDownUp 1s ease-in-out infinite; /* Apply the new animation */
-  }
-  
-  /* Keyframes for down and up animation */
-  @keyframes moveDownUp {
+    z-index: 1000;
+}
+
+/* Animation for hovering effect */
+.icon-drop:hover {
+    animation: moveDownUp 1s ease-in-out infinite;
+    filter: drop-shadow(0px 0px 10px rgba(173, 216, 230, 0.8));
+    transition: filter 0.3s ease-in-out;
+}
+
+
+/* Keyframes for down and up animation */
+@keyframes moveDownUp {
     0% {
-      transform: translateY(0); /* Start at normal position */
+        transform: translateY(0);
+        /* Start at normal position */
     }
+
     50% {
-      transform: translateY(10px); /* Move down by 10px */
+        transform: translateY(10px);
+        /* Move down by 10px */
     }
+
     100% {
-      transform: translateY(0); /* Return to the original position */
+        transform: translateY(0);
+        /* Return to the original position */
     }
-  }
-  
+}
+
 
 /* Start Button (Includes play icon and start text) */
 .start-button {

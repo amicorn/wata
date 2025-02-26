@@ -1,46 +1,65 @@
 let drinkCount = 3;
 let countdown;
-let minutesToDrink = 30;
+let minutesToDrink = 0.1;
 let timeLeft = minutesToDrink * 60; // Convert minutes to seconds
 
-// Audio elements
-let potionAudio = new Audio("assets/music sfx/potion-bubbling.mp3");
-potionAudio.loop = true;
+// 🔹 Persistent Sounds (Looping or Multi-Screen Sounds)
+let sounds = {
+  potion: createAudio("assets/music sfx/potion-bubbling.mp3", { loop: true, volume: 0.4 }),
+  timer: createAudio("assets/music sfx/magic-timer.mp3"),
+  waterDrop: createAudio("assets/music sfx/water-drop-pop.mp3"),
+  background: createAudio("assets/music sfx/Under This Luminous Sky  Official Soundtrack -  3. Weaved Theme.mp3", { loop: true, volume: 0.5, startTime: 2 }),
+};
 
-let timerAudio = new Audio("assets/music sfx/magic-timer.mp3");
+// 🔹 Screen-Specific Sound Effects (One-Time Sounds)
+const soundEffects = {
+  "reward-screen": ["magic-reveal.mp3", "mixkit-fairy-glitter-867.mp3"],
+  "cast-spell-screen": ["mixkit-spellcaster-fairy-swoosh-1463.mp3"],
+  "timesup-screen": ["magic-timer.mp3"],
+};
 
-playBackgroundMusic();
+// 🎵 Start Background Music
+sounds.background.play();
 
-document.querySelector('.close-box').addEventListener('click', () => {
-  window.close();
+// 🔹 Create a new audio instance with configurations
+function createAudio(src, { loop = false, volume = 1.0, startTime = 0 } = {}) {
+  let audio = new Audio(src);
+  audio.loop = loop;
+  audio.volume = volume;
+  audio.currentTime = startTime;
+  return audio;
+}
+
+// 🔈 Play any sound (supports looping, volume, start time)
+function playSound(audio, { loop = false, volume = 0.4, startTime = 0 } = {}) {
+  if (!audio) return;
+  audio.loop = loop;
+  audio.volume = volume;
+  audio.currentTime = startTime;
+  audio.play();
+}
+
+// 🔇 Stop any sound
+function stopSound(audio) {
+  if (audio && !audio.paused) {
+    audio.pause();
+    audio.currentTime = 0;
+  }
+}
+
+// ❌ Close Button
+document.querySelector('.close-box').addEventListener('click', () => window.close());
+
+// 💧 Water Drop Hover SFX
+document.addEventListener("DOMContentLoaded", function () {
+  const iconDrop = document.querySelector(".icon-drop");
+  if (iconDrop) {
+    iconDrop.addEventListener("mouseenter", () => playSound(sounds.waterDrop));
+    iconDrop.addEventListener("mouseleave", () => stopSound(sounds.waterDrop));
+  }
 });
 
-function playBackgroundMusic() {
-  const backgroundMusic = new Audio("assets/music sfx/Under This Luminous Sky  Official Soundtrack -  3. Weaved Theme.mp3");
-  backgroundMusic.loop = true;
-  backgroundMusic.volume = 0.5;
-  backgroundMusic.currentTime = 2;
-  backgroundMusic.play(); // Start playing immediately
-}
-
-// Function to play a sound effect (using predefined instances)
-function playSound(audio) {
-  if (audio.paused) {
-    audio.volume = 0.4;
-    audio.currentTime = 0; // Restart sound
-    audio.play();
-  }
-}
-
-// Function to stop a sound effect
-function stopSound(audio) {
-  if (!audio.paused) {
-    audio.pause();
-    audio.currentTime = 0; // Reset to start
-  }
-}
-
-// Start button → Menu screen
+// 📌 Navigation Functions
 function goToMenu() {
   console.log("Going to menu screen...");
   switchScreen("start-screen", "menu-screen");
@@ -51,12 +70,12 @@ function goToCountdown() {
   startCountdown();
 }
 
+// ⏳ Start Countdown Timer
 function startCountdown() {
   clearInterval(countdown);
   timeLeft = minutesToDrink * 60;
   updateTimerDisplay();
-
-  playSound(potionAudio); // Play potion sound
+  playSound(sounds.potion);
 
   countdown = setInterval(() => {
     timeLeft--;
@@ -68,13 +87,14 @@ function startCountdown() {
   }, 1000);
 }
 
+// 🔢 Update Timer Display
 function updateTimerDisplay() {
   let minutes = Math.floor(timeLeft / 60);
   let seconds = timeLeft % 60;
-  document.getElementById("timer").innerText =
-    `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+  document.getElementById("timer").innerText = `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
 }
 
+// 🚰 Drink Water Logic
 function drinkWater() {
   if (drinkCount > 1) {
     drinkCount--;
@@ -86,6 +106,7 @@ function drinkWater() {
   }
 }
 
+// 🔢 Update Drink Count Text
 function updateDrinkCountText() {
   const drinkCountElement = document.getElementById("drink-count-text");
   if (drinkCountElement) {
@@ -93,11 +114,12 @@ function updateDrinkCountText() {
   }
 }
 
+// 🏆 Final Screen
 function goToFinalScreen() {
   switchScreen("cast-spell-screen", "reward-screen");
 }
 
-// Function to switch screens
+// 📌 Switch Screens + Manage Sounds
 function switchScreen(hide, show) {
   const hideScreen = document.getElementById(hide);
   const showScreen = document.getElementById(show);
@@ -111,21 +133,12 @@ function switchScreen(hide, show) {
   hideScreen.style.display = "none";
   showScreen.style.display = "block";
 
-  // Play unique sounds for different screens
-  if (show === "reward-screen") {
-    playSound(new Audio("assets/music sfx/magic-reveal.mp3"));
-    playSound(new Audio("assets/music sfx/mixkit-fairy-glitter-867.mp3"));
-  } else if (show === "cast-spell-screen") {
-    playSound(new Audio("assets/music sfx/mixkit-spellcaster-fairy-swoosh-1463.mp3"));
-  } else if (show === "timesup-screen") {
-    playSound(timerAudio); // Use global timer instance
+  // 🎶 Play sounds assigned to the new screen
+  if (soundEffects[show]) {
+    soundEffects[show].forEach(sound => playSound(new Audio(`assets/music sfx/${sound}`)));
   }
 
-  // Stop potion sound when leaving countdown screen
-  if (hide === "countdown-screen") {
-    stopSound(potionAudio);
-  }
-  if (hide === "timesup-screen") {
-    stopSound(timerAudio);
-  }
+  // 🚫 Stop sounds when leaving screens
+  if (hide === "countdown-screen") stopSound(sounds.potion);
+  if (hide === "timesup-screen") stopSound(sounds.timer);
 }
