@@ -1,6 +1,6 @@
 let drinkCount = 3;
 let countdown;
-let minutesToDrink = 0.1;
+let minutesToDrink = 30;
 let timeLeft = minutesToDrink * 60; // Convert minutes to seconds
 
 // 🔹 Persistent Sounds (Looping or Multi-Screen Sounds)
