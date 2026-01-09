@@ -1,9 +1,9 @@
 let drinkCount = 3;
 let countdown;
-let minutesToDrink = 30;
+let minutesToDrink = 0.1;
 let timeLeft = minutesToDrink * 60; // Convert minutes to seconds
 
-// 🔹 Persistent Sounds (Looping or Multi-Screen Sounds)
+// Persistent sounds (looping / multi-screen)
 let sounds = {
   potion: createAudio("assets/music sfx/potion-bubbling.mp3", { loop: true, volume: 0.4 }),
   timer: createAudio("assets/music sfx/magic-timer.mp3"),
@@ -11,16 +11,16 @@ let sounds = {
   background: createAudio("assets/music sfx/Under This Luminous Sky  Official Soundtrack -  3. Weaved Theme.mp3", { loop: true, volume: 0.5, startTime: 2 }),
 };
 
-// 🔹 Screen-Specific Sound Effects (One-Time Sounds)
+// Screen-specific sound fx (one time)
 const soundEffects = {
   "reward-screen": ["magic-reveal.mp3", "mixkit-fairy-glitter-867.mp3"],
   "cast-spell-screen": ["mixkit-spellcaster-fairy-swoosh-1463.mp3"],
 };
 
-// 🎵 Start Background Music
+// 🎵 Start background music
 sounds.background.play();
 
-// 🔹 Create a new audio instance with configurations
+// Create a new audio instance with configurations
 function createAudio(src, { loop = false, volume = 1.0, startTime = 0 } = {}) {
   let audio = new Audio(src);
   audio.loop = loop;
