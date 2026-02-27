@@ -1,10 +1,12 @@
 # wata: a thirst alert app 🧚🏼‍♀️💧
 Art, design, and code by me (@amicorn)
 
-<img src="screenshots/start screen.png" alt="App Cover Screen" width="300">
-<img src="screenshots/Menu Screen.png" alt="App Cover Screen" width="300">
-<img src="screenshots/end screen.png" alt="App Cover Screen" width="300">
 
+| Start Screen | Menu Screen | Timer Screen |
+| :---: | :---: | :---: |
+| <img src="screenshots/start screen.png" width="200"> | <img src="screenshots/Menu Screen.png" width="200"> | <img src="screenshots/timer screen.png" width="200"> |
+| Log Water Screen | End Screen | App Cover Design |
+| <img src="screenshots/log water screen.png" alt="App Log Water Screen" width="200"> | <img src="screenshots/end screen.png" alt="App End Screen" width="200"> | <img src="screenshots/wata app cover screen.png" alt="App Cover Screen" width="200"> |
 
 ## Overview
 🎶 wata wata eh eh 🎶
