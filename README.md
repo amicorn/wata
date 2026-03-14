@@ -1,5 +1,5 @@
 # wata: a thirst alert app 🧚🏼‍♀️💧
-Art, design, and code by me (@amicorn)
+Art, design, and code by Amy Ouyang (@amicornz)
 
 
 | Start Screen | Menu Screen | Timer Screen |
@@ -9,14 +9,14 @@ Art, design, and code by me (@amicorn)
 | <img src="screenshots/log water screen.png" alt="App Log Water Screen" width="200"> | <img src="screenshots/end screen.png" alt="App End Screen" width="200"> | <img src="screenshots/wata app cover screen.png" alt="App Cover Screen" width="200"> |
 
 ## Overview
-🎶 wata wata eh eh 🎶
+🎶 wata wata eh eh 🎶 (sing to the tune of Waka Waka by Shakira hehe)
 
 Stay hydrated with this fantasy-themed drink water reminder app. 💦
 
-Pixies, potions, and pixels will motivate you to get that H2O fueling your life force.
+Pixies, potions, and pixels will motivate you to get that H2O fueling your life force
 
 ## Inspiration
-App idea came to me because I'm always thirsty and dehydrated and so are all my female friends. Theme is fantasy pastel pixel art because I love fantasy and decided to try my hand at pixel art for the first time.
+App idea came to me because I'm always thirsty and dehydrated and so are all my female friends. Theme is fantasy pastel pixel art because I love fantasy and decided to try my hand at pixel art for the first time!
 
 ## Tech stack
 - Framework == Electron: framework to make desktop apps. Embeds Chromium rendering engine and Node.js runtime.
