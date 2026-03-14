@@ -1,5 +1,6 @@
 # wata: a thirst alert app 🧚🏼‍♀️💧
-Art, design, and code by Amy Ouyang (@amicornz)
+Art, design, and code by Amy Ouyang (@amicornz).
+
 Entire app is 100% original, hand-drawn, & hand-animated.
 
 
