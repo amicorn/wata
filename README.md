@@ -1,5 +1,7 @@
 # wata: a thirst alert app 🧚🏼‍♀️💧
 Art, design, and code by Amy Ouyang (@amicornz)
+Entire app is 100% original, hand-drawn, & hand-animated.
+
 
 
 | Start Screen | Menu Screen | Timer Screen |
@@ -24,7 +26,7 @@ App idea came to me because I'm always thirsty and dehydrated and so are all my 
 - Languages == Javascript, HTML, CSS
 
 ## Design
-Design by me
+Entire app is 100% hand-drawn, hand-animated, original art, animations, and design by Amy Ouyang.
 - <a href="https://www.figma.com/proto/tKL5Rx1BYedixCro0N6j8R/Wata-app?node-id=49-5&t=p1OWdJ0uXzS725B6-1">Figma prototype</a>
 
 ## Workflow
